@@ -1,5 +1,5 @@
 {% set name = "drm4g" %}
-{% set version = "3.0.11" %}
+{% set version = "3.0.13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/drm4g-{{ version }}.tar.gz
-  sha256: ece23c282d1d8fb82b34a8885166676984fd846da7ff644edc5fc174364de2a0
+  sha256: 5efa8f8301d04f9eca388d6a1de8ffb507128a5a410d708ff41f54e6a886f6b6
 
 build:
   skip: true  # [not linux]
@@ -17,7 +17,7 @@ build:
     - gw_em_mad_drm4g.py=drm4g.core.em_mad:main
     - gw_tm_mad_drm4g.py=drm4g.core.tm_mad:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 3
+  number: 0
 
 requirements:
   build:
